@@ -18,5 +18,37 @@
 
     <script>
         // ...
+        //Funções append e prepend
+        $('#div1').append(', 2')
+        $('#div1').prepend('0, ')
+
+        //Funções appendTo e aprependTo
+        $('<span>, 3</span>').appendTo('#div1')
+        $('<span>-1, </span>').prependTo('#div1')
+
+        $('#div2').before('<p>Antes do Elemento 1</p>')//Colocando o elemento antes do elemento selecionado
+        $('#div2').after('<p>Depois do elemento 1</p>')//Colocando o elemento depois do elemento selecionado
+
+
+        $('<p>Antes do elemento 3</p>').insertBefore('#div3')//Coloca o elemento antes do elemento selecionado
+        $('<p>Depois do elemento 3</p>').insertAfter('#div3')//Coloca o elemento depois do elemento selecionado
+
+        //$('p.numero').wrap('<div>')//Vai envolve o elemento selecionado com a div
+        $('p.numero').wrapAll('<div id="div4">')//Vai envolver o elemento selecionado com a div
+
+        $('#div4').empty()//Remove o conteudo do elemento
+        $('#div3, #div4')//Seleciona os elementos com os ids div3 div4
+        .prev()//Seleciona os elementos que antecede o elemento selecionado anteriormente
+        .remove()//Remove os elementos selecionados 
+
+        //$('<div>Substituto</div>')//criando elemento
+        //.replaceAll('body > p')//O elemento <p> que antecede o elemento <body> é substituido pelo elemento antes criado
+        
+        //$('body > p').replaceWith('<div>Substituto</div>')
+
+        
+        $('body > p').replaceWith(function() {
+            return $('<div>').html($(this).html()).append('!!!')
+        })
     </script>
 </body>
