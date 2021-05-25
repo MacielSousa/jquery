@@ -21,5 +21,14 @@
         ]
         
         // ...
+
+        $('#conteudo').append('<table id="tabela"></table>')
+        $('#tabela').append('<tr><td>Nome</td><td>Nota</td></tr>')
+
+        function listTabela (){
+            pessoas.map((pessoa) => $('#tabela').append('<tr><td>'+pessoa.nome+'</td><td>'+pessoa.nota+'</td></tr>'))
+        }
+
+        listTabela()
     </script>
 </body>
