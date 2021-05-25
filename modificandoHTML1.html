@@ -13,8 +13,47 @@
     <div id='conteudo1'></div>
     <div id='conteudo2'></div>
     <div id='conteudo3'></div>
+    <div>Sem ID!</div>
 
     <script>
-        // ...
+        //Conteudo 1
+        //Insrindo o elemento na pagina
+        $('#conteudo1')//Selecionar elemento com id igual conteudo1
+        .append('<p>1</p>')//Inserindo elemento dentro da <div>
+
+        //Conteudo 2
+        //Criando elemento
+        const elementos = [
+            $('<li>').append('Arroz'),//Criando o elemento li e passando o valor
+            $('<li>').append('Feijão'),//Criando o elemento li e passando o valor
+            $('<li>').append('Carne'),//Criando o elemento li e passando o valor
+            $('<li>').append('Sal')//Criando o elemento li e passando o valor
+        ]
+        
+        //Criando elemento e colocando os elementos na lista já criada
+        const lista = $('<ul><li>Sorvete</li></ul>').prepend(elementos)
+
+        /* Obs:  o append adiciona os itens depois do primeiro item da lista 
+        já inserido, já o prepend insere os itens antes do elemento já contino
+        na lista jogando o elemento já presente na lista para a ultima posição */
+
+        $('#conteudo2').append(lista)//Inserindo a lista no elemento que contem id conteudo2
+
+        //Conteudo 3
+        //
+        //
+        $('#conteudo3')
+        .append(['<h1>1</h1>', '<h1>2</h1>'])//Inserindo elementos de formato de array
+        .prepend('<h1>0</h1>')//Inserindo o elemento antes do primeiro elemento inserido
+
+        $('#conteudo3').html('<h1>123</h1>')//Insere o elemento sobrepondo todos os outros elementos já existente
+        $('#conteudo3').text('<h1>123</h1>')//Insere como texto dentro do elemento
+
+        //Alterando todos
+        $('div[id]').html('<strong>Todos!</strong>')//Insere o elemento sobrepondo todos os outros elementos já existente dentro da div[id]
+
+
+
+
     </script>
 </body>
