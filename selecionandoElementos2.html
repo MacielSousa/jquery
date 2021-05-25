@@ -74,13 +74,67 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
                 magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
                 consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                <span>Dentro do Span</span>
+            </p>
         </section>
     </main>
     <footer>
-        <p>Cod3r Ensino</p>
+        <p>JQuery Ensino</p>
     </footer>
     <script>
         // ...
+        const comBorda = { 'border': 'solid 8px orange'}
+        const semBorda = { 'border': 'none'}
+
+        
+        $('a[href="#link3"]')//Selecionando o elemento <a> que tem o propriedade href igual #link3
+        .parent()//Seleciona o elemento pai do elemento selecionado 
+        .css(comBorda)//Aplica o estilo ao elemento selecionado
+        .css(semBorda)//Aplica o estilo ao elemento selecionado
+
+        $('li:last') //Seleciona o ultimo elemento li
+        .prev() //Seleciona o elemento que antecede o elemento selecionado
+        .css(comBorda) //Aplica o css no elemento
+        .css(semBorda) //Aplica o css no elemento
+
+        $('a[href="#link3"]')//Seleciona o elemento <a> que tem a propriedade href igual #link3
+        .parent()//Seleciona o elemento pai do elemento selecionado
+        .next()//Seleciona o proximo elemento do elemento selecionado
+        .css(comBorda)//Aplica o estilo
+        .css(semBorda)//Aplica o estilo
+
+        $('a[href="#link1"]')//Seleciona o elemento  <a>  que contem a propriedade href igual #link1
+        .parents()//Seleciona todos os elementos que é pai do elemento selecionado
+        .css(comBorda)//Aplica o estilo
+        .css(semBorda)//Aplica o estilo
+
+        $('a[href="#link1"]')//Seleciona o elemento  <a>  que contem a propriedade href igual #link1 
+        .parentsUntil($('body'))//Seleciona todos os elemento pais até o elemento body
+        .css(comBorda)//Aplica o css
+        .css(semBorda)//Aplica o css
+
+        $('main')//Seleciona o elemento que contem a classe main
+        .children() //Seleciona todos os filhos direto do elemento selecionado
+        .css(comBorda) //Aplica o estilo
+        .css(semBorda) //Aplica o estilo
+
+        $('body')//Seleciona o elemento <body>
+        .find('a')//selciona todos os elemento <a>
+        .css(comBorda)//Aplica o estilo no elemento selecionado
+        .css(semBorda)//Aplica o estilo no elemento selecionado
+
+        //Manipulando o elemento já selçecionado dentro de uma variavel
+        const elemenetoDom = document.getElementsByClassName('menu')
+        $(elemenetoDom).css(comBorda)
+
+        $('main')//Seleciona o elemento que contem a classe igual a main
+        .children() //Seleciona todos os filhos do elemento selecionado anteriormente
+        .each((indice, elemento) => $(elemento)//Acessa todos os elementos selecionados
+        .css(comBorda))//Aplica o estilo no css
+
+        $('li').each((index, elemento) => {
+            $(elemento).css(comBorda)
+        })
     </script>
 </body>

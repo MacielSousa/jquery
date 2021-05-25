@@ -50,38 +50,49 @@
 
     <script>
         // ...
-       //Selecionar elemento por class //Adicionar classe   //Remove classe
-       $('#feira').addClass('destaque').removeClass('destaque');
+           
+       $('#feira') //Selecionar elemento por class
+       .addClass('destaque') //Adicionar classe
+       .removeClass('destaque'); //Remove classe
 
-       //Seleiconar elemento por id //Adicionar classe
-       $('li').addClass('destaque')
+        
+       $('li')//Seleiconar elemento por nome de tag
+       .addClass('destaque') //Adicionar classe
 
-       //Selecionando elemento por atributo //Removendo classe
-       $('[wm-obrigatorio]').removeClass('destaque')
+        
+       $('[wm-obrigatorio]') //Selecionando elemento por atributo
+       .removeClass('destaque') //Removendo classe
 
-       //Selecionando o elemento li que contenha a classe opcional
-       //Removendo classe destaque do elemento
-       $('li.opcional').removeClass('destaque')
+       
+       
+       $('li.opcional') //Selecionando o elemento li que contenha a classe opcional
+       .removeClass('destaque') //Removendo classe destaque do elemento
 
-       // selecionando elemento span que é filho de p que por sua vez e filho de div
-       $('div p span').addClass('destaque')//Adicionando a classe destaque no elemento
+       
+       $('div p span') //selecionando elemento span que é filho de p que por sua vez e filho de div
+       .addClass('destaque')//Adicionando a classe destaque no elemento
 
-       //Exclusivo jQuery
-       //Filtros de Seletores, Exclusivos
-       //Esse seletor com filtro pega o primeiro elemento e aplica o stylo
-       $('li:first').css('border', 'solid 3px yellow')
+       //Filtros Exclusivo do jQuery
+       //Filtros de Seletores, Exclusivos do JQuery
+      
+       $('li:first') //Esse seletor com filtro pega o primeiro elemento e aplica o stylo
+       .css('border', 'solid 3px yellow')
 
-       //Esse seletor com filtro pega todos elementos filhos de li em posição impa e aplica o stylo
-       $('li:odd').css('border', 'solid 10px orange')
+       
+       $('li:odd')//Esse seletor com filtro pega todos elementos filhos de li em posição impa e aplica o stylo
+       .css('border', 'solid 10px orange')
 
-       //Seletor com filtro, aplica o stylo a partir do elemento 1
-       $('li:gt(1)').css('border', 'solid 10px white')
+       
+       $('li:gt(1)')//Seletor com filtro, aplica o stylo a partir do elemento 1
+       .css('border', 'solid 10px white')
 
-       //Seletor filtro, tira a borda de todos os elementos li menos do ultimo
-       $('li:not(:last)').css('border', 'none')
+      
+       $('li:not(:last)')//Seletor filtro, tira a borda de todos os elementos li menos do ultimo
+       .css('border', 'none')
 
-       //Seletor com filtro, coloca o stylo no elemento que contem letra r
-       $('li:contains("rr")').css('background-color', 'black')
+       
+       $('li:contains("rr")')//Seletor com filtro, coloca o stylo no elemento que contem letra r
+       .css('background-color', 'black')
 
        //Filtros de formulario
        //Seletor universal, oculta o formulário
@@ -89,7 +100,6 @@
 
        //Seletor com filtro, desocultar elemento do type text de form
        $('form :text').show()
-
        $('form :password').show()
        $('form :checkbox').show()
        $('form :radio').show()
